@@ -1,0 +1,20 @@
+{
+  "name": "jb-pools-catalogue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.3",
+    "canvas": "^3.2.3",
+    "pdfjs-dist": "^3.11.174",
+    "playwright": "^1.62.1",
+    "sharp": "^0.35.3"
+  }
+}
