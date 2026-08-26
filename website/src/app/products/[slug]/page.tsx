@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getProductBySlug, getAllProducts, slugify, getRelatedProducts } from '@/lib/products';
+import { SITE_CONFIG } from '@/lib/siteConfig';
 import ProductCard from '@/components/ProductCard';
 import type { Metadata } from 'next';
 
@@ -44,7 +45,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const hasImage = product.images && product.images.length > 0 && product.images[0];
 
   const sizeStr = product.sizes.length > 0 && product.sizes[0] ? product.sizes[0] : '';
-  const waUrl = `https://wa.me/917676036101?text=${encodeURIComponent(
+  const waUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
     `Hello JB Pools & Accessories,\n\nI am interested in: ${product.name}${product.model ? `\nModel: ${product.model}` : ''}${sizeStr ? `\nSize: ${sizeStr}` : ''}\n\nPlease share availability and pricing.`
   )}`;
 
