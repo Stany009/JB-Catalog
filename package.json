@@ -1,15 +1,20 @@
 {
   "name": "jb-pools-catalogue",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "JB Pools & Accessories Product Catalogue",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cd website && npm run dev",
+    "build": "cd website && npm install && npm run build",
+    "start": "cd website && npm start",
+    "lint": "cd website && npm run lint",
+    "extract": "node scripts/extract-pdf.mjs",
+    "crop": "node scripts/crop-smart-v2.mjs",
+    "map-images": "node scripts/map-product-images.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@napi-rs/canvas": "^1.0.3",
     "canvas": "^3.2.3",
