@@ -8,32 +8,26 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: '🏗️',
     title: 'Pool Construction',
     description: 'Complete swimming pool construction services from design to completion. Residential and commercial projects.',
   },
   {
-    icon: '🔄',
     title: 'Pool Renovation',
     description: 'Pool renovation and refurbishment services. Update your existing pool with modern equipment and finishes.',
   },
   {
-    icon: '🔧',
     title: 'Pool Maintenance',
     description: 'Regular pool maintenance services to keep your pool clean, safe, and running efficiently.',
   },
   {
-    icon: '💧',
     title: 'Water Treatment',
     description: 'Professional water treatment solutions including chemical balancing, chlorination systems, and UV sterilization.',
   },
   {
-    icon: '⚙️',
     title: 'Pool Equipment',
     description: 'Supply and installation of pumps, filters, lights, and all essential pool equipment from our comprehensive catalogue.',
   },
   {
-    icon: '🪣',
     title: 'Pool Accessories',
     description: 'Complete range of pool accessories including cleaning tools, fittings, and water features.',
   },
@@ -56,7 +50,7 @@ export default function ServicesPage() {
             key={service.title}
             className="bg-white rounded-xl border border-gray-100 p-6 hover:shadow-md transition-shadow"
           >
-            <div className="text-4xl mb-4">{service.icon}</div>
+
             <h2 className="text-base font-semibold text-[#0B2342] mb-2">{service.title}</h2>
             <p className="text-xs text-gray-500 leading-relaxed">{service.description}</p>
           </div>

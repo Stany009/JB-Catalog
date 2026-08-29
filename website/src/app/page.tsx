@@ -3,17 +3,7 @@ import Image from 'next/image';
 import { getCategoriesWithCounts, getFeaturedProducts, getAllProducts, getAllCategories } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
 
-const categoryIcons: Record<string, string> = {
-  'cleaning-equipment': '🧹',
-  'disinfection-systems': '💧',
-  'sand-filters': '🔄',
-  'cartridge-filters': '🔬',
-  'underwater-lights': '💡',
-  'pool-fittings': '🔧',
-  'pumps': '⚙️',
-  'integrated-filters': '🏗️',
-  'water-features': '🌊',
-};
+
 
 export default function HomePage() {
   const categories = getCategoriesWithCounts();
@@ -97,9 +87,7 @@ export default function HomePage() {
                 href={`/products?category=${cat.id}`}
                 className="category-card group bg-white rounded-xl border border-gray-100 p-5 sm:p-6 text-center"
               >
-                <div className="text-4xl sm:text-5xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-200">
-                  {categoryIcons[cat.id] || '📦'}
-                </div>
+
                 <h3 className="text-sm sm:text-base font-semibold text-[#0B2342] mb-1 group-hover:text-[#0D5EA6] transition-colors">
                   {cat.name}
                 </h3>
@@ -160,40 +148,32 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {[
               {
-                icon: '📋',
                 title: 'Comprehensive Catalogue',
                 desc: `Over ${totalProducts} products across ${totalCategories} categories extracted from 11 official catalogue PDFs. Every product verified against source documents.`,
               },
               {
-                icon: '🏭',
                 title: 'Quality Equipment',
                 desc: 'Premium pool equipment from leading manufacturers. Fiberglass filters, stainless steel fittings, and IP68 rated lighting systems.',
               },
               {
-                icon: '🔧',
                 title: 'Complete Solutions',
                 desc: 'From construction to maintenance. Pumps, filters, lights, fittings, disinfection systems, and water features — everything in one place.',
               },
               {
-                icon: '📱',
                 title: 'Easy Enquiry',
                 desc: 'Find the product you need, check specifications, and send an enquiry directly via WhatsApp or our contact form. Quick and simple.',
               },
               {
-                icon: '🏨',
                 title: 'Commercial & Residential',
                 desc: 'Serving homeowners, hotels, resorts, architects, builders, and pool contractors with the right equipment for every project.',
               },
               {
-                icon: '📊',
                 title: 'Technical Specifications',
                 desc: 'Detailed specifications, flow rates, dimensions, and material information for every product. Make informed decisions.',
               },
             ].map((item) => (
               <div key={item.title} className="feature-card p-6 sm:p-7">
-                <div className="w-12 h-12 rounded-xl bg-[#0D5EA6]/10 flex items-center justify-center text-2xl mb-4">
-                  {item.icon}
-                </div>
+
                 <h3 className="text-base font-semibold text-[#0B2342] mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
               </div>

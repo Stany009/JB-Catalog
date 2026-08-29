@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   tagline: 'Complete Swimming Pool Solutions',
 
   // WhatsApp
-  whatsappNumber: '917676036101',
+  whatsappNumber: '91767036101',
   whatsappDisplay: '+91 76760 36101',
   get whatsappUrl() {
     return `https://wa.me/${this.whatsappNumber}`;

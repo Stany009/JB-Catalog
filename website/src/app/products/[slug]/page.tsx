@@ -30,17 +30,6 @@ export default async function ProductDetailPage({ params }: Props) {
 
   const related = getRelatedProducts(product, 4);
 
-  const categoryIcons: Record<string, string> = {
-    'cleaning-equipment': '🧹',
-    'disinfection-systems': '💧',
-    'sand-filters': '🔄',
-    'cartridge-filters': '🔬',
-    'underwater-lights': '💡',
-    'pool-fittings': '🔧',
-    'pumps': '⚙️',
-    'integrated-filters': '🏗️',
-    'water-features': '🌊',
-  };
 
   const hasImage = product.images && product.images.length > 0 && product.images[0];
 
@@ -80,7 +69,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   priority
                 />
               ) : (
-                <span className="text-6xl sm:text-8xl">{categoryIcons[product.category] || '📦'}</span>
+                <span className="text-6xl sm:text-8xl text-gray-300">—</span>
               )}
             </div>
           </div>
@@ -215,7 +204,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <ul className="space-y-1.5">
                 {product.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-[#35C6D9] mt-0.5">✦</span>
+                    <span className="text-[#35C6D9] mt-0.5">—</span>
                     {benefit}
                   </li>
                 ))}
