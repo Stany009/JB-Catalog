@@ -6,14 +6,14 @@ export const SITE_CONFIG = {
   tagline: 'Complete Swimming Pool Solutions',
 
   // WhatsApp
-  whatsappNumber: '91767036101',
-  whatsappDisplay: '+91 76760 36101',
+  whatsappNumber: '917676036101',
+  whatsappDisplay: '+91 7676036101,
   get whatsappUrl() {
     return `https://wa.me/${this.whatsappNumber}`;
   },
 
   // Contact
-  phone: '+91 76760 36101',
+  phone: '+91 7676036101',
   phoneRaw: '917676036101',
 
   // Email (configured via env)
