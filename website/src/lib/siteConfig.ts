@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
 
   // WhatsApp
   whatsappNumber: '917676036101',
-  whatsappDisplay: '+91 7676036101,
+  whatsappDisplay: '+91 7676036101',
   get whatsappUrl() {
     return `https://wa.me/${this.whatsappNumber}`;
   },
